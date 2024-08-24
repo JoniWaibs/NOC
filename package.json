@@ -1,0 +1,30 @@
+{
+  "name": "noc-app",
+  "version": "1.0.0",
+  "description": "A NOC program to show multiple dashboards",
+  "main": "src/app.ts",
+  "scripts": {
+    "dev": "tsnd --respawn --clear src/app.ts",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js",
+    "lint:fix": "eslint src/* --fix",
+    "format": "prettier src/* --write"
+  },
+  "author": "Jonatan Waibsnaider",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/nodemailer": "^6.4.15",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "3.3.3",
+    "rimraf": "^6.0.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.1.0"
+  },
+  "dependencies": {
+    "cron": "^3.1.7",
+    "dotenv": "^16.4.5",
+    "env-var": "^7.5.0",
+    "nodemailer": "^6.9.14"
+  }
+}
